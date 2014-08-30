@@ -40,7 +40,7 @@ versions are:
   * Windows 7 sp1
   * Windows 8.1
     
-#### Notes
+##### Notes
   
   * Wireless network adapter should be turned on.
   * Windows 8: Wireless devices should be turned on (Click "Logo
@@ -77,22 +77,12 @@ Notes:
 
 ### Meshr feature list
 
-#### Automatic configuration
-  
-Meshr runs automatic configuration script during installation (it is
-./defaults.bat script file in the installation folder). More info
+Template loop detected: Manual:Meshr feature list
 
-#### Automatic updates
-  
-Meshr does checks for updates every 24 hours (it is ./update.bat
-script file). It checks release branch in git and downloads modified
-files if there are new ones. You can also run ./lib/update-master.bat
-batch file manually to update to the most recent version from master
-(pre-release) branch. It also updates ipkg software list.
 
 ### How it works?
     
-#### Before first use
+##### Before first use
 
 Meshr generates default configuration after installation to create new
 meshr node (it is here ./default.bat)
@@ -120,7 +110,7 @@ welcome).
     community ip address there. Press "Save & Apply" button to apply
     new settings (i.e. network and olsrd settings).
     
-#### Everyday use
+##### Everyday use
 
 Meshr is monitoring status of your wireless adapter (in
 ./lib/watchdog.bat)
@@ -169,27 +159,8 @@ Meshr is monitoring status of your wireless adapter (in
               10.177.254.1 to enable Internet access
     
 
-### Upgrading
-
-  * Meshr does automatic check and update every 24h.
-  * update.bat is updating script. You can run it with m option, i.e
-    update.bat m, to update from master (it is the most recent but
-    unstable developer branch).
-    
-Here is how you can update manually:
-
-##### MS Windows
-  
-Run "meshr-update" link from start menu or update.bat from
-installation folder (default: C:\opt\meshr) to update manually.
-
-##### Routers, Modems, ...
-  
-Telnet to your device. Run $meshr/update.bat (replace $meshr with the
-location where you installed meshr).
-
 ### Author ###
 
 * Yury Popov ( meshr.net[at]googlemail.com )
 
-#### This file is generated automatically from http://meshr.net wiki pages
+##### This file is generated automatically from http://meshr.net wiki pages
