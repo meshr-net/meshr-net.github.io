@@ -32,6 +32,7 @@
  
    Meshr requires PC with Windows XP sp3 or later. Tested Windows
    versions are:
+   
      * Windows XP sp3
      * Windows 7 sp1
      * Windows 8.1
