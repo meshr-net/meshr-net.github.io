@@ -28,9 +28,6 @@ https://github.com/meshr-net/meshr_win32/releases/download/latest/meshr_win32.ex
 * OLSR-Viz mesh-network nodes map
 
 ![OLSR-Viz map](https://raw.githubusercontent.com/meshr-net/meshr-net.github.io/master/img/Screenshot-OLSR-Viz map.png)
-* OSLR Daemon Settings
-
-![OSLR Daemon Settings](https://raw.githubusercontent.com/meshr-net/meshr-net.github.io/master/img/Screenshot-OSLR Daemon Settings.png)
 
 ### Installation requirements
  
@@ -77,8 +74,37 @@ Notes:
 
 ### Meshr feature list
 
-Template loop detected: Manual:Meshr feature list
-
+  * Free Internet. Meshr shares and anonymizes your internet
+    connection. It provides you free Internet access thru other nodes.
+  * P2P distribution. Meshr doesn't require Internet for operation. It
+    distributes required software thru its users home pages
+    (splashscreens).
+  * Auto-connection. Meshr uses wifi profiles to setup/restore wifi
+    adapter settings. It connects to meshr.net automatically if you
+    wifi adapter is idle.
+  * Mesh-network compatibility. Meshr is compatible with the other
+    Freifunk mesh networks. It runs automatic configuration when it is
+    connected to know mesh-networks.
+  * Wide device compatibility. Meshr uses olsr routing protocol, which
+    has wide compatibility: BSD, i386, Android, iPhone, Linux, Mac
+    OSX, Win32. Meshr can be installed on local PC and remote router
+    from the same installation file. No reflashing firmware required
+    for routers when possible.
+  * Multilanguage support.
+  * Unified webinterface for all devices. Background working process.
+  * Minimum system requirements. Meshr software for routers can be
+    installed on network drive (nfs or samba) or even to RAM (/tmp).
+    No flashdrive requirements.
+  * Zero-configuration. Meshr runs automatic configuration script
+    during installation (it is ./defaults.bat script file in the
+    installation folder). It does automatic geo-location during
+    configuration..
+  * Automatic updates. Meshr does checks for updates every 24 hours
+    (it is ./update.bat script file). It checks release branch in git
+    and downloads modified files if there are new ones. You can also
+    run ./lib/update-master.bat batch file manually to update to the
+    most recent version from master (pre-release) branch. It also
+    updates ipkg software list.
 
 ### How it works?
     
