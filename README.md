@@ -1,4 +1,4 @@
-# Meshr.Net
+# meshr.net
 
 Meshr is a free open source software for creating and popularization
 of mesh networks. The main goals of Meshr are to make Internet
