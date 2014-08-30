@@ -6,9 +6,9 @@ available to as much number of people as possible all over the world,
 to make communication between people free and depend only on mesh
 network members and to make free and accurate Wi-Fi positioning. To
 reach these goals it makes available easy to use zero-configuration
-cross-platform versions of Freifunk Openwrt firmwares for
-international community. Meshr is an open and independent project.
-Everyone is welcome to contribute.
+cross-platform software versions of Freifunk Openwrt firmwares (no
+need to reflash your firmware) for international community. Meshr is
+an open and independent project. Everyone is welcome to contribute.
 
 Software versions for different platforms including Windows are
 available now. They allow to connect to Freifunk networks and
@@ -20,12 +20,16 @@ https://github.com/meshr-net/meshr_win32/releases/download/latest/meshr_win32.ex
 ### Screenshots
 
 * Open Street Map with mesh-network links and nodes
+
 ![Screenshot-FF-Map](https://github.com/meshr-net/meshr-net.github.io/blob/master/img/Screenshot-FF-Map.jpg)
-* Splashscreen of each mesh-network node
+* Splashscreen of every meshr.net node
+
 ![Splashscreen](img/Screenshot-Splashscreen.png)
 * OLSR-Viz mesh-network nodes map
+
 ![OLSR-Viz map](img/Screenshot-OLSR-Viz map.png)
 * OSLR Daemon Settings
+
 ![OSLR Daemon Settings](img/Screenshot-OSLR Daemon Settings.png)
 
 ### Installation requirements
@@ -94,8 +98,8 @@ Meshr generates default configuration after installation to create new
 meshr node (it is here ./default.bat)
  1. Meshr tries to determine your current geo-location to fill basic
     settings for you (it is here
-    http://127.0.0.1:8084/luci/admin/freifunk/basics/, for router
-    replace 127.0.0.1 with your router IP).
+    http://127.0.0.1:8084/luci/admin/freifunk/basics/, or replace
+    127.0.0.1 with your router IP if you installed meshr into it).
  2. You get IP-address in 10.177.0.0/16 range from meshr.net while
     installation. IP is generated automatically in
     10.177.128.1-10.177.253.255 range if there is no Internet access.
@@ -109,8 +113,8 @@ than meshr (any help for integration with other mesh networks is
 welcome).
  1. Make sure correct community is selected on "Administration ->
     Freifunk -> Basic Settings" page
-    http://127.0.0.1:8084/luci/admin/freifunk/basics/, for router
-    replace 127.0.0.1 with your router IP
+    http://127.0.0.1:8084/luci/admin/freifunk/basics/, or replace
+    127.0.0.1 with your router IP if you installed meshr there.
  2. Go to "Administration -> Freifunk -> Mesh Wizard" page. Select
     Interface where "Mesh IP address" is enabled and input your
     community ip address there. Press "Save & Apply" button to apply
@@ -145,8 +149,8 @@ Meshr is monitoring status of your wireless adapter (in
               direct connection between them. It also advertised TOR
               proxy servers for Internet access.
       2. If all users disconnect from your node then meshr stops TOR,
-         DualServer and meshr-splash services and restores your old IP
-         settings (it happens only under Windows) .
+         DualServer/dnsmasq and meshr-splash services and restores
+         your old IP settings (it happens only under Windows) .
  2. If your computer has no Internet access and you are connecting to
     meshr node (wireless network with meshr.net name) then
       1. If you haven't installed meshr software then you will get
@@ -167,12 +171,25 @@ Meshr is monitoring status of your wireless adapter (in
 
 ### Upgrading
 
+  * Meshr does automatic check and update every 24h.
+  * update.bat is updating script. You can run it with m option, i.e
+    update.bat m, to update from master (it is the most recent but
+    unstable developer branch).
+    
+Here is how you can update manually:
+
+#### MS Windows
+  
 Run "meshr-update" link from start menu or update.bat from
-installation folder (default: C:\opt\meshr) to update manually. Meshr
-does automatic check and update every 24h.
+installation folder (default: C:\opt\meshr) to update manually.
+
+#### Routers, Modems, ...
+  
+Telnet to your device. Run $meshr/update.bat (replace $meshr with the
+location where you installed meshr).
 
 ### Author ###
 
-* Yury Popov (<meshr.net[at]googlemail.com>)
+* Yury Popov ( meshr.net[at]googlemail.com )
 
-#### This file is generated automatically from http://Meshr.Net wiki pages
+#### This file is generated automatically from http://meshr.net wiki pages
