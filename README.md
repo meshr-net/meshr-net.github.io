@@ -17,7 +17,7 @@ meshr.net free Internet gateways anonymized by TOR.
 Use the links below to download and install Meshr on Windows
 https://github.com/meshr-net/meshr_win32/releases/download/latest/meshr_win32.exe
    
-### Screenshots
+## Screenshots
 
 * Open Street Map with mesh-network links and nodes
 
@@ -32,7 +32,7 @@ https://github.com/meshr-net/meshr_win32/releases/download/latest/meshr_win32.ex
 
 ![OSLR Daemon Settings](https://raw.githubusercontent.com/meshr-net/meshr-net.github.io/master/img/Screenshot-OSLR Daemon Settings.png)
 
-### Installation requirements
+## Installation requirements
  
 Meshr requires PC with Windows XP sp3 or later. Tested Windows
 versions are:
@@ -40,7 +40,7 @@ versions are:
   * Windows 7 sp1
   * Windows 8.1
     
-#### Notes
+## Notes
   
   * Wireless network adapter should be turned on.
   * Windows 8: Wireless devices should be turned on (Click "Logo
@@ -49,7 +49,7 @@ versions are:
 Security reminder: Meshr requires Administrator privileges to install.
 
 
-### Installation guide
+## Installation guide
 
   * Download and run meshr_win32.exe to start installation.
   * Run meshr_win32.exe /S for silent installation.
@@ -59,7 +59,7 @@ Security reminder: Meshr requires Administrator privileges to install.
     run it from Start -> Run %meshr%\Uninstall.exe).
     
 
-### Configuration
+## Configuration
 
 Navigate to http://127.0.0.1:8084 in your browser to configure meshr
 thru Web interface.
@@ -75,14 +75,14 @@ Notes:
          wireless adapter.
     
 
-### Meshr feature list
+## Meshr feature list
 
-#### Automatic configuration
+## Automatic configuration
   
 Meshr runs automatic configuration script during installation (it is
 ./defaults.bat script file in the installation folder). More info
 
-#### Automatic updates
+## Automatic updates
   
 Meshr does checks for updates every 24 hours (it is ./update.bat
 script file). It checks release branch in git and downloads modified
@@ -90,9 +90,9 @@ files if there are new ones. You can also run ./lib/update-master.bat
 batch file manually to update to the most recent version from master
 (pre-release) branch. It also updates ipkg software list.
 
-### How it works?
+## How it works?
     
-#### Before first use
+## Before first use
 
 Meshr generates default configuration after installation to create new
 meshr node (it is here ./default.bat)
@@ -120,7 +120,7 @@ welcome).
     community ip address there. Press "Save & Apply" button to apply
     new settings (i.e. network and olsrd settings).
     
-#### Everyday use
+## Everyday use
 
 Meshr is monitoring status of your wireless adapter (in
 ./lib/watchdog.bat)
@@ -169,7 +169,7 @@ Meshr is monitoring status of your wireless adapter (in
               10.177.254.1 to enable Internet access
     
 
-### Upgrading
+## Upgrading
 
   * Meshr does automatic check and update every 24h.
   * update.bat is updating script. You can run it with m option, i.e
@@ -178,18 +178,18 @@ Meshr is monitoring status of your wireless adapter (in
     
 Here is how you can update manually:
 
-#### MS Windows
+## MS Windows
   
 Run "meshr-update" link from start menu or update.bat from
 installation folder (default: C:\opt\meshr) to update manually.
 
-#### Routers, Modems, ...
+## Routers, Modems, ...
   
 Telnet to your device. Run $meshr/update.bat (replace $meshr with the
 location where you installed meshr).
 
-### Author ###
+## Author ##
 
 * Yury Popov ( meshr.net[at]googlemail.com )
 
-#### This file is generated automatically from http://meshr.net wiki pages
+## This file is generated automatically from http://meshr.net wiki pages
