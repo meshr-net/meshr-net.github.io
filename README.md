@@ -19,18 +19,14 @@
    
 ### Screenshots
 
-* Screenshot-FF-Map
-<p align="center">
-    <img src="https://github.com/meshr-net/meshr-net.github.io/blob/master/img/Screenshot-FF-Map.jpg"/>
-</p>
-
+* Openstreet Map with links and nodes
 ![Screenshot-FF-Map](img/Screenshot-FF-Map.jpg)
-* Splashscreen
+* Splashscreen of each node
 ![Splashscreen](img/Screenshot-Splashscreen.png)
-* OLSR-Viz map
+* OLSR-Viz mesh nodes map
 ![OLSR-Viz map](img/Screenshot-OLSR-Viz map.png)
-* OSLR Daemon Settings.
-![OSLR Daemon Settings.](img/Screenshot-OSLR Daemon Settings.png)
+* OSLR Daemon Settings
+![OSLR Daemon Settings](img/Screenshot-OSLR Daemon Settings.png)
 
 ### Installation requirements
  
@@ -52,12 +48,12 @@ Security reminder: Meshr requires Administrator privileges to install.
 
 ### Installation guide
 
-     * Download and run meshr_win32.exe to start installation.
-     * Run meshr_win32.exe /S for silent installation.
-     * You need to confirm TUN/TAP adapter installation. It is required
-       to provide you anonymized Internet access.
-     * Run Uninstall.exe from installation folder to uninstall meshr (or
-       run it from Start -> Run %meshr%\Uninstall.exe).
+* Download and run meshr_win32.exe to start installation.
+* Run meshr_win32.exe /S for silent installation.
+* You need to confirm TUN/TAP adapter installation. It is required
+to provide you anonymized Internet access.
+* Run Uninstall.exe from installation folder to uninstall meshr (or
+run it from Start -> Run %meshr%\Uninstall.exe).
        
 
 ### Configuration
