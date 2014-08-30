@@ -20,7 +20,7 @@
 ### Screenshots
 
 * Openstreet Map with links and nodes
-![Screenshot-FF-Map](img/Screenshot-FF-Map.jpg)
+![Screenshot-FF-Map](https://github.com/meshr-net/meshr-net.github.io/blob/master/img/Screenshot-FF-Map.jpg)
 * Splashscreen of each node
 ![Splashscreen](img/Screenshot-Splashscreen.png)
 * OLSR-Viz mesh nodes map
@@ -119,52 +119,52 @@ Before first use
        
 Everyday use
 
-Meshr is monitoring status of your wireless adapter (in
-./lib/watchdog.bat)
-
+   Meshr is monitoring status of your wireless adapter (in
+   ./lib/watchdog.bat)
+   
 1. If your computer has Internet access and your wireless adapter is
-unused then meshr creates ad-hoc network and waits for users to
-connect
-1.1. If there is a new user connection then meshr launches on your
-computer (under linux it happens even without new user
-connection):
-1.1.1 TOR - it is socks proxy server for tunneling all new
-user's connections to Internet through it (it is here
-127.0.0.1:9150).
-              2. meshr-splash - it is a webserver with welcome page for
-                 new users (it used tcp socket like 10.177.X.X:80). It is
-                 necessary to provide meshr software download link to new
-                 users to enable them access to mesh networks, including
-                 TOR proxy servers for anonymous Internet access.
-              3. DualServer or dnsmasq (under linux) - it is DHCP and DNS
-                 server in one (DualServer web interface is
-                 http://127.0.0.1:6789 ). It provides IP address, default
-                 gateway and DNS server for new users. This settings are
-                 necessary to direct new user to your welcome page with
-                 meshr software download link.
-              4. olsrd - it is routing software that provides
-                 connectivity between mesh nodes even if there is no
-                 direct connection between them. It also advertised TOR
-                 proxy servers for Internet access.
-         2. If all users disconnect from your node then meshr stops TOR,
-            DualServer and meshr-splash services and restores your old IP
-            settings (it happens only under Windows) .
-    2. If your computer has no Internet access and you are connecting to
-       meshr node (wireless network with meshr.net name) then
-         1. If you haven't installed meshr software then you will get
-            meshr welcome page instead of any Internet page. You need to
-            download and install meshr software in this case.
-         2. If you have installed meshr software then you get IP-address
-            from it, then meshr launches on your computer olsrd routing
-            service and looks for available TOR proxy servers. Once it
-            finds working one it launches (in ./lib/tor-tun.bat):
-              1. badvpn-tun2socks It connects your TAP adapter with a TOR
-                 proxy server from mesh network. As a result new local
-                 internet gateway is created: 10.177.254.2
-              2. dns2socks It creates local dns server 10.177.254.1 for
-                 resolving Internet domains thru TOR socks server.
-              3. Default gateway is set to 10.177.254.2 and dns is set to
-                 10.177.254.1 to enable Internet access
+   unused then meshr creates ad-hoc network and waits for users to
+   connect
+     1. If there is a new user connection then meshr launches on your
+        computer (under linux it happens even without new user
+        connection):
+          1. TOR - it is socks proxy server for tunneling all new
+             user's connections to Internet through it (it is here
+             127.0.0.1:9150).
+          2. meshr-splash - it is a webserver with welcome page for
+             new users (it used tcp socket like 10.177.X.X:80). It is
+             necessary to provide meshr software download link to new
+             users to enable them access to mesh networks, including
+             TOR proxy servers for anonymous Internet access.
+          3. DualServer or dnsmasq (under linux) - it is DHCP and DNS
+             server in one (DualServer web interface is
+             http://127.0.0.1:6789 ). It provides IP address, default
+             gateway and DNS server for new users. This settings are
+             necessary to direct new user to your welcome page with
+             meshr software download link.
+          4. olsrd - it is routing software that provides
+             connectivity between mesh nodes even if there is no
+             direct connection between them. It also advertised TOR
+             proxy servers for Internet access.
+     2. If all users disconnect from your node then meshr stops TOR,
+        DualServer and meshr-splash services and restores your old IP
+        settings (it happens only under Windows) .
+2. If your computer has no Internet access and you are connecting to
+   meshr node (wireless network with meshr.net name) then
+     1. If you haven't installed meshr software then you will get
+        meshr welcome page instead of any Internet page. You need to
+        download and install meshr software in this case.
+     2. If you have installed meshr software then you get IP-address
+        from it, then meshr launches on your computer olsrd routing
+        service and looks for available TOR proxy servers. Once it
+        finds working one it launches (in ./lib/tor-tun.bat):
+          1. badvpn-tun2socks It connects your TAP adapter with a TOR
+             proxy server from mesh network. As a result new local
+             internet gateway is created: 10.177.254.2
+          2. dns2socks It creates local dns server 10.177.254.1 for
+             resolving Internet domains thru TOR socks server.
+          3. Default gateway is set to 10.177.254.2 and dns is set to
+             10.177.254.1 to enable Internet access
        
 
 ### Upgrading
