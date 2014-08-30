@@ -21,16 +21,16 @@ https://github.com/meshr-net/meshr_win32/releases/download/latest/meshr_win32.ex
 
 * Open Street Map with mesh-network links and nodes
 
-![Screenshot-FF-Map](https://github.com/meshr-net/meshr-net.github.io/blob/master/img/Screenshot-FF-Map.jpg)
+![Screenshot-FF-Map](https://raw.githubusercontent.com/meshr-net/meshr-net.github.io/master/img/Screenshot-FF-Map.jpg)
 * Splashscreen of every meshr.net node
 
-![Splashscreen](img/Screenshot-Splashscreen.png)
+![Splashscreen](https://raw.githubusercontent.com/meshr-net/meshr-net.github.io/master/img/Screenshot-Splashscreen.png)
 * OLSR-Viz mesh-network nodes map
 
-![OLSR-Viz map](img/Screenshot-OLSR-Viz map.png)
+![OLSR-Viz map](https://raw.githubusercontent.com/meshr-net/meshr-net.github.io/master/img/Screenshot-OLSR-Viz map.png)
 * OSLR Daemon Settings
 
-![OSLR Daemon Settings](img/Screenshot-OSLR Daemon Settings.png)
+![OSLR Daemon Settings](https://raw.githubusercontent.com/meshr-net/meshr-net.github.io/master/img/Screenshot-OSLR Daemon Settings.png)
 
 ### Installation requirements
  
