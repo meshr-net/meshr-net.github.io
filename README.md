@@ -19,11 +19,11 @@ https://github.com/meshr-net/meshr_win32/releases/download/latest/meshr_win32.ex
    
 ### Screenshots
 
-* Openstreet Map with links and nodes
+* Open Street Map with mesh-network links and nodes
 ![Screenshot-FF-Map](https://github.com/meshr-net/meshr-net.github.io/blob/master/img/Screenshot-FF-Map.jpg)
-* Splashscreen of each node
+* Splashscreen of each mesh-network node
 ![Splashscreen](img/Screenshot-Splashscreen.png)
-* OLSR-Viz mesh nodes map
+* OLSR-Viz mesh-network nodes map
 ![OLSR-Viz map](img/Screenshot-OLSR-Viz map.png)
 * OSLR Daemon Settings
 ![OSLR Daemon Settings](img/Screenshot-OSLR Daemon Settings.png)
@@ -48,29 +48,7 @@ Security reminder: Meshr requires Administrator privileges to install.
 ### Installation guide
 
   * Download and run meshr_win32.exe to start installation.
-   
-### Screenshots
-
-* Openstreet Map with links and nodes
-![Screenshot-FF-Map](https://github.com/meshr-net/meshr-net.github.io/blob/master/img/Screenshot-FF-Map.jpg)
-* Splashscreen of each node
-![Splashscreen](img/Screenshot-Splashscreen.png)
-* OLSR-Viz mesh nodes map
-![OLSR-Viz map](img/Screenshot-OLSR-Viz map.png)
-* OSLR Daemon Settings
-![OSLR Daemon Settings](img/Screenshot-OSLR Daemon Settings.png)
   * Run meshr_win32.exe /S for silent installation.
-   
-### Screenshots
-
-* Openstreet Map with links and nodes
-![Screenshot-FF-Map](https://github.com/meshr-net/meshr-net.github.io/blob/master/img/Screenshot-FF-Map.jpg)
-* Splashscreen of each node
-![Splashscreen](img/Screenshot-Splashscreen.png)
-* OLSR-Viz mesh nodes map
-![OLSR-Viz map](img/Screenshot-OLSR-Viz map.png)
-* OSLR Daemon Settings
-![OSLR Daemon Settings](img/Screenshot-OSLR Daemon Settings.png)
   * You need to confirm TUN/TAP adapter installation. It is required
     to provide you anonymized Internet access.
   * Run Uninstall.exe from installation folder to uninstall meshr (or
