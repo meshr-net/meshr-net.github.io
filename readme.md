@@ -30,20 +30,20 @@
 
 ### Installation requirements
  
-   Meshr requires PC with Windows XP sp3 or later. Tested Windows
-   versions are:
-   
-     * Windows XP sp3
-     * Windows 7 sp1
-     * Windows 8.1
-       
-  Notes
-  
-     * Wireless network adapter should be turned on.
-     * Windows 8: Wireless devices should be turned on (Click "Logo
-       key"+C : Settings -> Change PC Settings -> Wireless -> turn on)
-       
-   Security reminder: Meshr requires Administrator privileges to install.
+Meshr requires PC with Windows XP sp3 or later. Tested Windows
+versions are:
+
+* Windows XP sp3
+* Windows 7 sp1
+* Windows 8.1
+ 
+Notes
+
+* Wireless network adapter should be turned on.
+* Windows 8: Wireless devices should be turned on (Click "Logo
+ key"+C : Settings -> Change PC Settings -> Wireless -> turn on)
+ 
+Security reminder: Meshr requires Administrator privileges to install.
    
 
 ### Installation guide
