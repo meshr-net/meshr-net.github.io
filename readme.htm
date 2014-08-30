@@ -1,0 +1,183 @@
+# Meshr.Net<br/>
+<br/>
+   Meshr is a free open source software for creating and popularization<br/>
+   of mesh networks. The main goals of Meshr are to make Internet<br/>
+   available to as much number of people as possible all over the world,<br/>
+   to make communication between people free and depend only on mesh<br/>
+   network members and to make free and accurate Wi-Fi positioning. To<br/>
+   reach these goals it makes available easy to use zero-configuration<br/>
+   cross-platform versions of Freifunk Openwrt firmwares for<br/>
+   international community. Meshr is an open and independent project.<br/>
+   Everyone is welcome to contribute.<br/>
+   <br/>
+   Software versions for different platforms including Windows are<br/>
+   available now. They allow to connect to Freifunk networks and<br/>
+   meshr.net free Internet gateways anonymized by TOR.<br/>
+<br/>
+   Use the links below to download and install Meshr on Windows<br/>
+   https://github.com/meshr-net/meshr_win32/releases/download/latest/meshr_win32.exe<br/>
+   <br/>
+### Screenshots<br/>
+<br/>
+* Screenshot-FF-Map<br/>
+<p align="center">
+    <img src="https://github.com/meshr-net/meshr-net.github.io/blob/master/img/Screenshot-FF-Map.jpg"/>
+</p>
+<br/>
+![Screenshot-FF-Map](img/Screenshot-FF-Map.jpg)<br/>
+* Splashscreen<br/>
+![Splashscreen](img/Screenshot-Splashscreen.png)<br/>
+* OLSR-Viz map<br/>
+![OLSR-Viz map](img/Screenshot-OLSR-Viz map.png)<br/>
+* OSLR Daemon Settings.<br/>
+![OSLR Daemon Settings.](img/Screenshot-OSLR Daemon Settings.png)<br/>
+<br/>
+### Installation requirements<br/>
+ <br/>
+Meshr requires PC with Windows XP sp3 or later. Tested Windows<br/>
+versions are:<br/>
+<br/>
+* Windows XP sp3<br/>
+* Windows 7 sp1<br/>
+* Windows 8.1<br/>
+ <br/>
+Notes<br/>
+<br/>
+* Wireless network adapter should be turned on.<br/>
+* Windows 8: Wireless devices should be turned on (Click "Logo<br/>
+ key"+C : Settings -> Change PC Settings -> Wireless -> turn on)<br/>
+ <br/>
+Security reminder: Meshr requires Administrator privileges to install.<br/>
+   <br/>
+<br/>
+### Installation guide<br/>
+<br/>
+     * Download and run meshr_win32.exe to start installation.<br/>
+     * Run meshr_win32.exe /S for silent installation.<br/>
+     * You need to confirm TUN/TAP adapter installation. It is required<br/>
+       to provide you anonymized Internet access.<br/>
+     * Run Uninstall.exe from installation folder to uninstall meshr (or<br/>
+       run it from Start -> Run %meshr%\Uninstall.exe).<br/>
+       <br/>
+<br/>
+### Configuration<br/>
+<br/>
+   Navigate to http://127.0.0.1:8084 in your browser to configure meshr<br/>
+   thru Web interface.<br/>
+   <br/>
+   Notes:<br/>
+     *  %meshr% Windows environment variable added. It contains software<br/>
+       install path. Default value is C:/opt/meshr<br/>
+     * Windows related configuration files added to /etc folder:<br/>
+          + %meshr%/etc/wlan/ folder contains *.xml files for Windows<br/>
+            wireless profile configuration settings and *.txt files for<br/>
+            ip configuration settings.<br/>
+          + %meshr%/etc/wifi.txt file contains settings for default<br/>
+            wireless adapter.<br/>
+       <br/>
+<br/>
+### Meshr feature list<br/>
+<br/>
+  Automatic configuration<br/>
+  <br/>
+   Meshr runs automatic configuration script during installation (it is<br/>
+   ./defaults.bat script file in the installation folder). More info<br/>
+   <br/>
+  Automatic updates<br/>
+  <br/>
+   Meshr does checks for updates every 24 hours (it is ./update.bat<br/>
+   script file). It checks release branch in git and downloads modified<br/>
+   files if there are new ones. You can also run ./lib/update-master.bat<br/>
+   batch file manually to update to the most recent version from master<br/>
+   (pre-release) branch. It also updates ipkg software list.<br/>
+<br/>
+### How it works?<br/>
+       <br/>
+Before first use<br/>
+<br/>
+   Meshr generates default configuration after installation to create new<br/>
+   meshr node (it is here ./default.bat)<br/>
+    1. Meshr tries to determine your current geo-location to fill basic<br/>
+       settings for you (it is here<br/>
+       http://127.0.0.1:8084/luci/admin/freifunk/basics/, for router<br/>
+       replace 127.0.0.1 with your router IP).<br/>
+    2. You get IP-address in 10.177.0.0/16 range from meshr.net while<br/>
+       installation. IP is generated automatically in<br/>
+       10.177.128.1-10.177.253.255 range if there is no Internet access.<br/>
+    3. Meshr is looking for known mesh networks that are available in the<br/>
+       air. If it finds any it configures meshr settings to create new<br/>
+       node of this network. If there is no known networks then it<br/>
+       configures meshr settings to create new node of meshr.net network.<br/>
+       <br/>
+   Note: Additional setup is needed for Freifunk olsr mesh networks other<br/>
+   than meshr (any help for integration with other mesh networks is<br/>
+   welcome).<br/>
+    1. Make sure correct community is selected on "Administration -><br/>
+       Freifunk -> Basic Settings" page<br/>
+       http://127.0.0.1:8084/luci/admin/freifunk/basics/, for router<br/>
+       replace 127.0.0.1 with your router IP<br/>
+    2. Go to "Administration -> Freifunk -> Mesh Wizard" page. Select<br/>
+       Interface where "Mesh IP address" is enabled and input your<br/>
+       community ip address there. Press "Save & Apply" button to apply<br/>
+       new settings (i.e. network and olsrd settings).<br/>
+       <br/>
+Everyday use<br/>
+<br/>
+   Meshr is monitoring status of your wireless adapter (in<br/>
+   ./lib/watchdog.bat)<br/>
+    1. If your computer has Internet access and your wireless adapter is<br/>
+       unused then meshr creates ad-hoc network and waits for users to<br/>
+       connect<br/>
+         1. If there is a new user connection then meshr launches on your<br/>
+            computer (under linux it happens even without new user<br/>
+            connection):<br/>
+              1. TOR - it is socks proxy server for tunneling all new<br/>
+                 user's connections to Internet through it (it is here<br/>
+                 127.0.0.1:9150).<br/>
+              2. meshr-splash - it is a webserver with welcome page for<br/>
+                 new users (it used tcp socket like 10.177.X.X:80). It is<br/>
+                 necessary to provide meshr software download link to new<br/>
+                 users to enable them access to mesh networks, including<br/>
+                 TOR proxy servers for anonymous Internet access.<br/>
+              3. DualServer or dnsmasq (under linux) - it is DHCP and DNS<br/>
+                 server in one (DualServer web interface is<br/>
+                 http://127.0.0.1:6789 ). It provides IP address, default<br/>
+                 gateway and DNS server for new users. This settings are<br/>
+                 necessary to direct new user to your welcome page with<br/>
+                 meshr software download link.<br/>
+              4. olsrd - it is routing software that provides<br/>
+                 connectivity between mesh nodes even if there is no<br/>
+                 direct connection between them. It also advertised TOR<br/>
+                 proxy servers for Internet access.<br/>
+         2. If all users disconnect from your node then meshr stops TOR,<br/>
+            DualServer and meshr-splash services and restores your old IP<br/>
+            settings (it happens only under Windows) .<br/>
+    2. If your computer has no Internet access and you are connecting to<br/>
+       meshr node (wireless network with meshr.net name) then<br/>
+         1. If you haven't installed meshr software then you will get<br/>
+            meshr welcome page instead of any Internet page. You need to<br/>
+            download and install meshr software in this case.<br/>
+         2. If you have installed meshr software then you get IP-address<br/>
+            from it, then meshr launches on your computer olsrd routing<br/>
+            service and looks for available TOR proxy servers. Once it<br/>
+            finds working one it launches (in ./lib/tor-tun.bat):<br/>
+              1. badvpn-tun2socks It connects your TAP adapter with a TOR<br/>
+                 proxy server from mesh network. As a result new local<br/>
+                 internet gateway is created: 10.177.254.2<br/>
+              2. dns2socks It creates local dns server 10.177.254.1 for<br/>
+                 resolving Internet domains thru TOR socks server.<br/>
+              3. Default gateway is set to 10.177.254.2 and dns is set to<br/>
+                 10.177.254.1 to enable Internet access<br/>
+       <br/>
+<br/>
+### Upgrading<br/>
+<br/>
+   Run "meshr-update" link from start menu or update.bat from<br/>
+   installation folder (default: C:\opt\meshr) to update manually. Meshr<br/>
+   does automatic check and update every 24h.<br/>
+<br/>
+### Author ###<br/>
+<br/>
+* Yury Popov (<meshr.net[at]googlemail.com>)<br/>
+<br/>
+This file is generated automatically from http://Meshr.Net wiki pages
