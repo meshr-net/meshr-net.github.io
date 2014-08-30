@@ -1,4 +1,4 @@
-# meshr.net
+# Meshr.Net
 
 Meshr is a free open source software for creating and popularization
 of mesh networks. The main goals of Meshr are to make Internet
@@ -162,6 +162,6 @@ does automatic check and update every 24h.
 
 ### Author ###
 
-#### * Yury Popov (<meshr.net[at]googlemail.com>)
+* Yury Popov ( meshr.net[at]googlemail.com )
 
 #### This file is generated automatically from http://Meshr.Net wiki pages
