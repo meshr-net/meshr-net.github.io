@@ -16,6 +16,17 @@ meshr.net free Internet gateways anonymized by TOR.
 
 Use the links below to download and install Meshr on Windows
 https://github.com/meshr-net/meshr_win32/releases/download/latest/meshr_win32.exe
+   
+### Screenshots
+
+* Openstreet Map with links and nodes
+![Screenshot-FF-Map](https://github.com/meshr-net/meshr-net.github.io/blob/master/img/Screenshot-FF-Map.jpg)
+* Splashscreen of each node
+![Splashscreen](img/Screenshot-Splashscreen.png)
+* OLSR-Viz mesh nodes map
+![OLSR-Viz map](img/Screenshot-OLSR-Viz map.png)
+* OSLR Daemon Settings
+![OSLR Daemon Settings](img/Screenshot-OSLR Daemon Settings.png)
 
 ### Installation requirements
  
@@ -37,7 +48,29 @@ Security reminder: Meshr requires Administrator privileges to install.
 ### Installation guide
 
   * Download and run meshr_win32.exe to start installation.
+   
+### Screenshots
+
+* Openstreet Map with links and nodes
+![Screenshot-FF-Map](https://github.com/meshr-net/meshr-net.github.io/blob/master/img/Screenshot-FF-Map.jpg)
+* Splashscreen of each node
+![Splashscreen](img/Screenshot-Splashscreen.png)
+* OLSR-Viz mesh nodes map
+![OLSR-Viz map](img/Screenshot-OLSR-Viz map.png)
+* OSLR Daemon Settings
+![OSLR Daemon Settings](img/Screenshot-OSLR Daemon Settings.png)
   * Run meshr_win32.exe /S for silent installation.
+   
+### Screenshots
+
+* Openstreet Map with links and nodes
+![Screenshot-FF-Map](https://github.com/meshr-net/meshr-net.github.io/blob/master/img/Screenshot-FF-Map.jpg)
+* Splashscreen of each node
+![Splashscreen](img/Screenshot-Splashscreen.png)
+* OLSR-Viz mesh nodes map
+![OLSR-Viz map](img/Screenshot-OLSR-Viz map.png)
+* OSLR Daemon Settings
+![OSLR Daemon Settings](img/Screenshot-OSLR Daemon Settings.png)
   * You need to confirm TUN/TAP adapter installation. It is required
     to provide you anonymized Internet access.
   * Run Uninstall.exe from installation folder to uninstall meshr (or
@@ -162,6 +195,6 @@ does automatic check and update every 24h.
 
 ### Author ###
 
-* Yury Popov ( meshr.net[at]googlemail.com )
+* Yury Popov (<meshr.net[at]googlemail.com>)
 
 #### This file is generated automatically from http://Meshr.Net wiki pages
