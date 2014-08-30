@@ -121,6 +121,7 @@ Everyday use
 
 Meshr is monitoring status of your wireless adapter (in
 ./lib/watchdog.bat)
+
 1. If your computer has Internet access and your wireless adapter is
 unused then meshr creates ad-hoc network and waits for users to
 connect
